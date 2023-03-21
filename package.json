@@ -1,0 +1,62 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "vaxo",
+  "author": "Guillaume Garcia",
+  "module": "dist/vaxo.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/vaxo.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/vaxo.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@clarigen/cli": "^0.3.6",
+    "@clarigen/test": "^1.0.4",
+    "@size-limit/preset-small-lib": "^8.2.4",
+    "@stacks/eslint-config": "^1.2.0",
+    "@stacks/prettier-config": "^0.0.10",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.5",
+    "size-limit": "^8.2.4",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.2"
+  }
+}

@@ -3,3 +3,8 @@
 **/settings/Testnet.toml
 .cache/**
 history.txt
+*.log
+.DS_Store
+node_modules
+dist
+
